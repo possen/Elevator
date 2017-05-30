@@ -7,14 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D568EF961EDD424400635BE0 /* ElevatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF951EDD424400635BE0 /* ElevatorView.swift */; };
+		D568EF981EDD42D600635BE0 /* FloorRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF971EDD42D600635BE0 /* FloorRequests.swift */; };
+		D568EF9A1EDD432F00635BE0 /* ElevatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF991EDD432F00635BE0 /* ElevatorManager.swift */; };
+		D568EF9C1EDD436600635BE0 /* FloorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF9B1EDD436600635BE0 /* FloorPanel.swift */; };
+		D568EFA11EDD470D00635BE0 /* ElevatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EFA01EDD470D00635BE0 /* ElevatorViewController.swift */; };
+		D568EFA31EDD4B8000635BE0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EFA21EDD4B8000635BE0 /* Utils.swift */; };
 		D57028641EDB486500F29DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57028631EDB486500F29DE6 /* AppDelegate.swift */; };
 		D57028661EDB486500F29DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57028651EDB486500F29DE6 /* ViewController.swift */; };
 		D57028691EDB486500F29DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57028671EDB486500F29DE6 /* Main.storyboard */; };
 		D570286B1EDB486500F29DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D570286A1EDB486500F29DE6 /* Assets.xcassets */; };
 		D570286E1EDB486500F29DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D570286C1EDB486500F29DE6 /* LaunchScreen.storyboard */; };
+		D57028761EDB48C500F29DE6 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57028751EDB48C500F29DE6 /* Elevator.swift */; };
+		D570287E1EDBB0A600F29DE6 /* ElevatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570287D1EDBB0A600F29DE6 /* ElevatorsTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D57028801EDBB0A600F29DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D57028581EDB486500F29DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D570285F1EDB486500F29DE6;
+			remoteInfo = Elevators;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D568EF951EDD424400635BE0 /* ElevatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatorView.swift; sourceTree = "<group>"; };
+		D568EF971EDD42D600635BE0 /* FloorRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorRequests.swift; sourceTree = "<group>"; };
+		D568EF991EDD432F00635BE0 /* ElevatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatorManager.swift; sourceTree = "<group>"; };
+		D568EF9B1EDD436600635BE0 /* FloorPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPanel.swift; sourceTree = "<group>"; };
+		D568EFA01EDD470D00635BE0 /* ElevatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatorViewController.swift; sourceTree = "<group>"; };
+		D568EFA21EDD4B8000635BE0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D57028601EDB486500F29DE6 /* Elevators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elevators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57028631EDB486500F29DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57028651EDB486500F29DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +46,10 @@
 		D570286A1EDB486500F29DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D570286D1EDB486500F29DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D570286F1EDB486500F29DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57028751EDB48C500F29DE6 /* Elevator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
+		D570287B1EDBB0A600F29DE6 /* ElevatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D570287D1EDBB0A600F29DE6 /* ElevatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatorsTests.swift; sourceTree = "<group>"; };
+		D570287F1EDBB0A600F29DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,13 +60,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D57028781EDBB0A600F29DE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D568EF9D1EDD462D00635BE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D57028751EDB48C500F29DE6 /* Elevator.swift */,
+				D568EF9B1EDD436600635BE0 /* FloorPanel.swift */,
+				D568EF991EDD432F00635BE0 /* ElevatorManager.swift */,
+				D568EF971EDD42D600635BE0 /* FloorRequests.swift */,
+				D568EFA21EDD4B8000635BE0 /* Utils.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D568EF9E1EDD466200635BE0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D57028651EDB486500F29DE6 /* ViewController.swift */,
+				D568EFA01EDD470D00635BE0 /* ElevatorViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D568EF9F1EDD467E00635BE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D568EF951EDD424400635BE0 /* ElevatorView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		D57028571EDB486500F29DE6 = {
 			isa = PBXGroup;
 			children = (
 				D57028621EDB486500F29DE6 /* Elevators */,
+				D570287C1EDBB0A600F29DE6 /* ElevatorsTests */,
 				D57028611EDB486500F29DE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D57028601EDB486500F29DE6 /* Elevators.app */,
+				D570287B1EDBB0A600F29DE6 /* ElevatorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,13 +121,24 @@
 			isa = PBXGroup;
 			children = (
 				D57028631EDB486500F29DE6 /* AppDelegate.swift */,
-				D57028651EDB486500F29DE6 /* ViewController.swift */,
+				D568EF9F1EDD467E00635BE0 /* View */,
+				D568EF9E1EDD466200635BE0 /* Controllers */,
+				D568EF9D1EDD462D00635BE0 /* Model */,
 				D57028671EDB486500F29DE6 /* Main.storyboard */,
 				D570286A1EDB486500F29DE6 /* Assets.xcassets */,
 				D570286C1EDB486500F29DE6 /* LaunchScreen.storyboard */,
 				D570286F1EDB486500F29DE6 /* Info.plist */,
 			);
 			path = Elevators;
+			sourceTree = "<group>";
+		};
+		D570287C1EDBB0A600F29DE6 /* ElevatorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D570287D1EDBB0A600F29DE6 /* ElevatorsTests.swift */,
+				D570287F1EDBB0A600F29DE6 /* Info.plist */,
+			);
+			path = ElevatorsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +161,24 @@
 			productReference = D57028601EDB486500F29DE6 /* Elevators.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D570287A1EDBB0A600F29DE6 /* ElevatorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57028821EDBB0A600F29DE6 /* Build configuration list for PBXNativeTarget "ElevatorsTests" */;
+			buildPhases = (
+				D57028771EDBB0A600F29DE6 /* Sources */,
+				D57028781EDBB0A600F29DE6 /* Frameworks */,
+				D57028791EDBB0A600F29DE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D57028811EDBB0A600F29DE6 /* PBXTargetDependency */,
+			);
+			name = ElevatorsTests;
+			productName = ElevatorsTests;
+			productReference = D570287B1EDBB0A600F29DE6 /* ElevatorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +193,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UVHFXZWG47;
 						ProvisioningStyle = Automatic;
+					};
+					D570287A1EDBB0A600F29DE6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UVHFXZWG47;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D570285F1EDB486500F29DE6;
 					};
 				};
 			};
@@ -115,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				D570285F1EDB486500F29DE6 /* Elevators */,
+				D570287A1EDBB0A600F29DE6 /* ElevatorsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +232,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D57028791EDBB0A600F29DE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +247,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57028661EDB486500F29DE6 /* ViewController.swift in Sources */,
+				D568EFA11EDD470D00635BE0 /* ElevatorViewController.swift in Sources */,
+				D568EFA31EDD4B8000635BE0 /* Utils.swift in Sources */,
+				D568EF9A1EDD432F00635BE0 /* ElevatorManager.swift in Sources */,
 				D57028641EDB486500F29DE6 /* AppDelegate.swift in Sources */,
+				D568EF981EDD42D600635BE0 /* FloorRequests.swift in Sources */,
+				D568EF961EDD424400635BE0 /* ElevatorView.swift in Sources */,
+				D57028761EDB48C500F29DE6 /* Elevator.swift in Sources */,
+				D568EF9C1EDD436600635BE0 /* FloorPanel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57028771EDBB0A600F29DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D570287E1EDBB0A600F29DE6 /* ElevatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D57028811EDBB0A600F29DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D570285F1EDB486500F29DE6 /* Elevators */;
+			targetProxy = D57028801EDBB0A600F29DE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D57028671EDB486500F29DE6 /* Main.storyboard */ = {
@@ -285,6 +417,34 @@
 			};
 			name = Release;
 		};
+		D57028831EDBB0A600F29DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UVHFXZWG47;
+				INFOPLIST_FILE = ElevatorsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.synthus.ElevatorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elevators.app/Elevators";
+			};
+			name = Debug;
+		};
+		D57028841EDBB0A600F29DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UVHFXZWG47;
+				INFOPLIST_FILE = ElevatorsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.synthus.ElevatorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elevators.app/Elevators";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +464,16 @@
 				D57028741EDB486600F29DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D57028821EDBB0A600F29DE6 /* Build configuration list for PBXNativeTarget "ElevatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57028831EDBB0A600F29DE6 /* Debug */,
+				D57028841EDBB0A600F29DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
