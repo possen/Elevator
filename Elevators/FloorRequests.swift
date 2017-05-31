@@ -11,7 +11,7 @@ import Foundation
 class FloorRequests {
     internal var requestNotify : () -> Void = {}
     internal var visitNotify : (Int, Elevator.Direction) -> Void = { floor in }
-    internal var requestedFloors = [Bool](repeating: false, count: 50)
+    internal var requestedFloors = [Bool](repeating: false, count: totalFloors)
     
     internal func makeRequest(floor : Int) {
         requestedFloors[floor] = true
@@ -20,7 +20,7 @@ class FloorRequests {
     
     internal func nearestRequestedFloor(from floor: Int, direction:Elevator.Direction) -> Int? {
         var indexSearchOrder : [Int]
-        let floor = floor.restrictRange(lower:0, upper: requestedFloors.count - 1)
+        let floor = floor.restrictRange(lower:0, upper: requestedFloors.count)
         
         switch direction {
         case .down:

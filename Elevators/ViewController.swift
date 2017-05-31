@@ -23,13 +23,28 @@ class ViewController: UIViewController {
         manager = ElevatorManager()
         
         // since these are IBOutlets can't map them, link them with the associated views.
-        let elevatorController0 = ElevatorViewController( model: manager, index:0, stackView: elevator0)
-        let elevatorController1 = ElevatorViewController( model: manager, index:1, stackView: elevator1)
-        let elevatorController2 = ElevatorViewController( model: manager, index:2, stackView: elevator2)
-        let elevatorController3 = ElevatorViewController( model: manager, index:3, stackView: elevator3)
+        let elevatorController0 = ElevatorViewController( manager: manager, index:0, stackView: elevator0)
+        let elevatorController1 = ElevatorViewController( manager: manager, index:1, stackView: elevator1)
+        let elevatorController2 = ElevatorViewController( manager: manager, index:2, stackView: elevator2)
+        let elevatorController3 = ElevatorViewController( manager: manager, index:3, stackView: elevator3)
         
         elevatorControllers = [elevatorController0, elevatorController1, elevatorController2, elevatorController3]
         
+        _ = elevatorControllers.map { $0.update() }
+        
+        manager.motionComplete = {
+            print("movements complete")
+            _ = self.elevatorControllers.map { $0.update() }
+        }
+        
+        manager.updateNotify = {
+            _ = self.elevatorControllers.map { $0.update() }
+        }
+
+        manager.floorButtonPress(floor: 3, direction: .up)
+        manager.floorButtonPress(floor: 19, direction: .up)
+        manager.floorButtonPress(floor: 5, direction: .down)
+
     }
 }
 

@@ -8,10 +8,14 @@
 
 import Foundation
 
+let totalFloors = 20
+let totalElevators = 4
+
 class ElevatorManager {
-    let requests = FloorRequests()
-    let floorPanels = Array(0..<20).map { FloorPanel(name: "\($0)") }
-    let elevators = Array(0..<4).map { Elevator(name: "\($0)") }
+    internal let requests = FloorRequests()
+    internal var updateNotify : () -> Void = {}
+    internal let floorPanels = Array(0..<totalFloors).map { FloorPanel(name: "\($0)") }
+    internal let elevators = Array(0..<totalElevators).map { Elevator(name: "\($0)") }
     
     internal var motionComplete : () -> Void = {}
     
@@ -53,7 +57,7 @@ class ElevatorManager {
     
     public func floorButtonPress(floor: Int, direction: Elevator.Direction)  {
         
-        let floor = floor.restrictRange(lower:0, upper: floorPanels.count - 1)
+        let floor = floor.restrictRange(lower:0, upper: floorPanels.count)
         
         switch direction {
         case .up:

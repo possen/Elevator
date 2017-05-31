@@ -37,16 +37,24 @@ class Elevator {
     }
     
     internal func moveTo(floor: Int) {
-        guard door.state == .open else {
+        guard door.state == .closed else {
             return
         }
         inProgressToFloor = floor
         direction = floor > currentFloor ? .up : .down
         let distance = abs(floor - currentFloor)
         
+        for floor in direction == .down ? floor..<currentFloor : currentFloor..<floor {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(timePerFloorInSeconds * floor)) {
+                self.currentFloor = floor
+                self.manager.updateNotify()
+            }
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(timePerFloorInSeconds * distance)) {
             self.currentFloor = floor
             self.visit()
+            self.manager.updateNotify()
         }
     }
     
@@ -82,15 +90,19 @@ class Elevator {
                 if self.cancelClose {
                     return
                 }
+                
                 self.changeState(.closed)
             }
         }
         
         private func changeState(_ doorState : DoorState) {
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(timeToChangeDoorStatedInSeconds)) { [unowned self] in
+                
                 if self.cancelClose && doorState == .closed {
                     return
                 }
+                
+                print("DoorState: \(doorState)")
                 self.state = doorState
             }
         }
