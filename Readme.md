@@ -12,6 +12,11 @@ Operation
 * The up and down buttons on the left side simulate the Up and Down buttons on the floor levels.
 * The 4 following columns are the current state of the elevators. If you click on the floor it simulate the buttons inside the elevator.
 * The arrows next to the columns show which way the elevator is going.
+* Key: 
+  - Blue: no elevator exists
+  - Yellow: elevator on floor, door closed.
+  - Black: door open
+  - Green: indicates that the elevator was requested from the elevator panel.
 
 Bugs
 ----
