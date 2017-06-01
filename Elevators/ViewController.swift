@@ -11,16 +11,29 @@ import UIKit
 class ViewController: UIViewController {
     var manager: ElevatorManager!
     var elevatorControllers : [ElevatorViewController] = []
+    var floorPanelController : FloorPanelViewController! = nil
+
+    @IBOutlet weak var floorPanel: UIStackView!
 
     @IBOutlet weak var elevator0: UIStackView!
     @IBOutlet weak var elevator1: UIStackView!
     @IBOutlet weak var elevator2: UIStackView!
     @IBOutlet weak var elevator3: UIStackView!
+    @IBOutlet weak var up0: UIButton!
+    @IBOutlet weak var down0: UIButton!
+    @IBOutlet weak var up1: UIButton!
+    @IBOutlet weak var down1: UIButton!
+    @IBOutlet weak var up2: UIButton!
+    @IBOutlet weak var down2: UIButton!
+    @IBOutlet weak var up3: UIButton!
+    @IBOutlet weak var down3: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         manager = ElevatorManager()
+        
+        floorPanelController = FloorPanelViewController(manager: manager, stackView: floorPanel)
         
         // since these are IBOutlets can't map them, link them with the associated views.
         let elevatorController0 = ElevatorViewController( manager: manager, index:0, stackView: elevator0)
@@ -35,16 +48,13 @@ class ViewController: UIViewController {
         manager.motionComplete = {
             print("movements complete")
             _ = self.elevatorControllers.map { $0.update() }
+            _ = self.floorPanelController.update()
         }
         
         manager.updateNotify = {
             _ = self.elevatorControllers.map { $0.update() }
+            _ = self.floorPanelController.update()
         }
-
-        manager.floorButtonPress(floor: 3, direction: .up)
-        manager.floorButtonPress(floor: 19, direction: .up)
-        manager.floorButtonPress(floor: 5, direction: .down)
-
     }
 }
 

@@ -13,6 +13,7 @@
 		D568EF9C1EDD436600635BE0 /* FloorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF9B1EDD436600635BE0 /* FloorPanel.swift */; };
 		D568EFA11EDD470D00635BE0 /* ElevatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EFA01EDD470D00635BE0 /* ElevatorViewController.swift */; };
 		D568EFA31EDD4B8000635BE0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EFA21EDD4B8000635BE0 /* Utils.swift */; };
+		D568EFA91EDE8C0200635BE0 /* FloorPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EFA81EDE8C0200635BE0 /* FloorPanelView.swift */; };
 		D57028641EDB486500F29DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57028631EDB486500F29DE6 /* AppDelegate.swift */; };
 		D57028661EDB486500F29DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57028651EDB486500F29DE6 /* ViewController.swift */; };
 		D57028691EDB486500F29DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57028671EDB486500F29DE6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		D570286E1EDB486500F29DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D570286C1EDB486500F29DE6 /* LaunchScreen.storyboard */; };
 		D57028761EDB48C500F29DE6 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57028751EDB48C500F29DE6 /* Elevator.swift */; };
 		D570287E1EDBB0A600F29DE6 /* ElevatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570287D1EDBB0A600F29DE6 /* ElevatorsTests.swift */; };
+		D57D2D1F1EDE8FC100FFC8B0 /* FloorPanelViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57D2D1E1EDE8FC100FFC8B0 /* FloorPanelViewControlller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 		D568EF9B1EDD436600635BE0 /* FloorPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPanel.swift; sourceTree = "<group>"; };
 		D568EFA01EDD470D00635BE0 /* ElevatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatorViewController.swift; sourceTree = "<group>"; };
 		D568EFA21EDD4B8000635BE0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D568EFA81EDE8C0200635BE0 /* FloorPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPanelView.swift; sourceTree = "<group>"; };
 		D57028601EDB486500F29DE6 /* Elevators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elevators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57028631EDB486500F29DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57028651EDB486500F29DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		D570287B1EDBB0A600F29DE6 /* ElevatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D570287D1EDBB0A600F29DE6 /* ElevatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatorsTests.swift; sourceTree = "<group>"; };
 		D570287F1EDBB0A600F29DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57D2D1E1EDE8FC100FFC8B0 /* FloorPanelViewControlller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPanelViewControlller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			children = (
 				D57028651EDB486500F29DE6 /* ViewController.swift */,
 				D568EFA01EDD470D00635BE0 /* ElevatorViewController.swift */,
+				D57D2D1E1EDE8FC100FFC8B0 /* FloorPanelViewControlller.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D568EF951EDD424400635BE0 /* ElevatorView.swift */,
+				D568EFA81EDE8C0200635BE0 /* FloorPanelView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -248,12 +254,14 @@
 			files = (
 				D57028661EDB486500F29DE6 /* ViewController.swift in Sources */,
 				D568EFA11EDD470D00635BE0 /* ElevatorViewController.swift in Sources */,
+				D57D2D1F1EDE8FC100FFC8B0 /* FloorPanelViewControlller.swift in Sources */,
 				D568EFA31EDD4B8000635BE0 /* Utils.swift in Sources */,
 				D568EF9A1EDD432F00635BE0 /* ElevatorManager.swift in Sources */,
 				D57028641EDB486500F29DE6 /* AppDelegate.swift in Sources */,
 				D568EF981EDD42D600635BE0 /* FloorRequests.swift in Sources */,
 				D568EF961EDD424400635BE0 /* ElevatorView.swift in Sources */,
 				D57028761EDB48C500F29DE6 /* Elevator.swift in Sources */,
+				D568EFA91EDE8C0200635BE0 /* FloorPanelView.swift in Sources */,
 				D568EF9C1EDD436600635BE0 /* FloorPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,26 +402,26 @@
 		D57028731EDB486600F29DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UVHFXZWG47;
 				INFOPLIST_FILE = Elevators/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.synthus.Elevators;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D57028741EDB486600F29DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UVHFXZWG47;
 				INFOPLIST_FILE = Elevators/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.synthus.Elevators;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

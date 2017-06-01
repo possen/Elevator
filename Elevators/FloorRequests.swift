@@ -20,16 +20,17 @@ class FloorRequests {
     
     internal func nearestRequestedFloor(from floor: Int, direction:Elevator.Direction) -> Int? {
         var indexSearchOrder : [Int]
-        let floor = floor.restrictRange(lower:0, upper: requestedFloors.count)
+        let floor = floor.restrictRange(lower:0, upper: requestedFloors.count - 1)
         
         switch direction {
-        case .down:
-            indexSearchOrder = Array<Int>(0..<floor).reversed() + Array<Int>(floor..<requestedFloors.count)
         case .up, .none: // if no direction assume up
             indexSearchOrder = Array<Int>(floor..<requestedFloors.count) + Array<Int>(0..<floor).reversed()
+        case .down:
+            indexSearchOrder = Array<Int>(0..<floor).reversed() + Array<Int>(floor..<requestedFloors.count)
         }
         
         indexSearchOrder.removeFirst() // don't visit current floor.
+        print("Search order", indexSearchOrder, direction)
         
         for floor in indexSearchOrder {
             let nearestRequested = requestedFloors[floor]

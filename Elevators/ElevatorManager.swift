@@ -39,15 +39,24 @@ class ElevatorManager {
     }
     
     internal func requestNotify() {
-        for elevator in elevators {
-            if let _ = elevator.inProgressToFloor {} else {
-                if let floor = requests.nearestRequestedFloor(from: elevator.currentFloor,
-                                                              direction: elevator.direction) {
-                    requests.clearFloorRequest(floor: floor)
-                    elevator.moveTo(floor:floor)
-                }
-                break
+        let distances : [(Elevator, Int, Int)] = elevators.flatMap { elevator in
+            if let _ = elevator.inProgressToFloor  {
+                return nil
+            } else {
+                let floor = requests.nearestRequestedFloor(from: elevator.currentFloor,
+                                                                      direction: elevator.direction) ?? Int.max
+
+                return (elevator, floor, abs(floor - elevator.currentFloor)) // distance
             }
+        }
+        
+        let closest = distances.min { (tuple1, tuple2) -> Bool in
+            return tuple1.2 < tuple2.2
+        }
+        
+        if let (elevator, floor, _) = closest, floor != Int.max {
+            requests.clearFloorRequest(floor: floor)
+            elevator.moveTo(floor:floor)
         }
     }
     
@@ -57,7 +66,7 @@ class ElevatorManager {
     
     public func floorButtonPress(floor: Int, direction: Elevator.Direction)  {
         
-        let floor = floor.restrictRange(lower:0, upper: floorPanels.count)
+        let floor = floor.restrictRange(lower:0, upper: floorPanels.count - 1)
         
         switch direction {
         case .up:

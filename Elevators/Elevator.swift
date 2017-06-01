@@ -9,7 +9,7 @@
 import Foundation
 
 class Elevator {
-    let timePerFloorInSeconds = 1
+    let timePerFloorInMilliseconds = 500
 
     enum Direction {
         case up
@@ -26,6 +26,7 @@ class Elevator {
     
     init(name: String) {
         self.name = name
+        door.elevator = self
     }
     
     internal func visit() {
@@ -36,22 +37,30 @@ class Elevator {
         door.closeRequest()
     }
     
+    internal func pressFloorButton(floor: Int) {
+        
+    }
+    
     internal func moveTo(floor: Int) {
         guard door.state == .closed else {
             return
         }
         inProgressToFloor = floor
         direction = floor > currentFloor ? .up : .down
-        let distance = abs(floor - currentFloor)
+     
+        let distance : (Int) -> Int = { floor in
+            return abs((floor - self.currentFloor))
+        }
         
-        for floor in direction == .down ? floor..<currentFloor : currentFloor..<floor {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(timePerFloorInSeconds * floor)) {
+        let now = DispatchTime.now()
+        for floor in stride(from: currentFloor, to:floor, by: floor > currentFloor ? 1 : -1) {
+            DispatchQueue.main.asyncAfter(deadline: now + .milliseconds(timePerFloorInMilliseconds * distance(floor) )) {
                 self.currentFloor = floor
                 self.manager.updateNotify()
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(timePerFloorInSeconds * distance)) {
+        DispatchQueue.main.asyncAfter(deadline: now + .milliseconds(timePerFloorInMilliseconds * distance(floor))) {
             self.currentFloor = floor
             self.visit()
             self.manager.updateNotify()
@@ -67,6 +76,7 @@ class Elevator {
         
         let timeToChangeDoorStatedInSeconds = 1
         let timeBeforeDoorCloses = 2
+        weak var elevator: Elevator! = nil
 
         enum DoorState {
             case open
@@ -104,6 +114,8 @@ class Elevator {
                 
                 print("DoorState: \(doorState)")
                 self.state = doorState
+                self.cancelClose = false
+                self.elevator.manager.updateNotify()
             }
         }
     }

@@ -11,49 +11,32 @@ import UIKit
 class ElevatorView: UIStackView {
     let layerRef : CALayer
     weak var manager : ElevatorManager! = nil
+    var elevator : Elevator! = nil
     
     enum State {
         case onFloorDoorClosed
         case onFloorDoorOpen
-        case notOnFloor
+        case notOnFloorOrRequested
+        case specificElevatorRequest           
     }
 
     override init(frame: CGRect) {
-        let view = UIView(frame: frame)
-        layerRef = view.layer
+        let floorPressView = UIButton(frame: frame)
+        layerRef = floorPressView.layer
         layerRef.borderColor = UIColor.gray.cgColor
-        layerRef.backgroundColor = UIColor.white.cgColor
+        layerRef.backgroundColor = UIColor.blue.cgColor
         layerRef.borderWidth = 2.0
         
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
-        addSubview(view)
-        
-        let size = CGSize(width: frame.size.width / 2, height: frame.size.height)
-        let rightOrigin = CGPoint(x: frame.origin.x + frame.size.width / 2, y: frame.origin.y)
-        let leftFrame = CGRect(origin: frame.origin, size: size)
-        let rightFrame = CGRect(origin: rightOrigin, size: size)
-       
-        let up = UIButton(frame: leftFrame)
-        let down = UIButton(frame: rightFrame)
-        up.titleLabel?.text = "•"
-        up.titleLabel?.textAlignment = .center
-        
-        up.addTarget(self, action: #selector(upAction), for: .touchUpInside)
-        down.addTarget(self, action: #selector(downAction), for: .touchUpInside)
-
-        addSubview(up)
-        addSubview(down)
+        addSubview(floorPressView)
+        floorPressView.addTarget(self, action: #selector(floorPresssAction), for: .touchUpInside)
     }
     
-    func upAction(sender: Any) {
-        print("up \(tag)")
-        manager.floorButtonPress(floor: tag, direction: .up)
-    }
-    
-    func downAction(sender: Any) {
-        print("down \(tag)")
-        manager.floorButtonPress(floor: tag, direction: .down)
+    func floorPresssAction(sender: Any) {
+        print("elevator floor request \(tag) elevator \(elevator.name)")
+        
+        elevator.pressFloorButton(floor: tag)
     }
 
     func changeState(_ state: State) {
@@ -62,8 +45,10 @@ class ElevatorView: UIStackView {
                 layerRef.backgroundColor = UIColor.yellow.cgColor
             case .onFloorDoorOpen:
                 layerRef.backgroundColor = UIColor.black.cgColor
-            case .notOnFloor:
+            case .notOnFloorOrRequested:
                 layerRef.backgroundColor = UIColor.blue.cgColor
+            case .specificElevatorRequest:
+                layerRef.backgroundColor = UIColor.green.cgColor
         }
     }
     

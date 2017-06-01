@@ -10,52 +10,51 @@ import UIKit
 
 class ElevatorViewController: UIViewController {
     var elevatorViews : [ElevatorView] = []
-    var elevatorManager : ElevatorManager!
+    var manager : ElevatorManager!
     let elevatorIndex : Int
-    let elevatorModel : Elevator
+    let elevator : Elevator
+    let maxFloor : Int
     
     init(manager: ElevatorManager, index: Int, stackView: UIStackView) {
-        self.elevatorManager = manager
+        self.manager = manager
         self.elevatorIndex = index
-        self.elevatorModel = elevatorManager.elevators[index]
+        self.elevator = manager.elevators[index]
+        maxFloor = manager.floorPanels.count - 1
 
         super.init(nibName: nil, bundle: nil)
         
-        for floor in 0..<manager.floorPanels.count {
+        for (floor, _) in manager.floorPanels.enumerated().reversed() {
             let frame = CGRect(x: 0,
-                               y: CGFloat(floor) * 10.0,
+                               y: 0,
                                width: stackView.frame.size.width,
-                               height: 10.0)
+                               height: 18.0)
 
             let elevatorView = ElevatorView(frame: frame)
+            elevatorView.elevator = elevator
             elevatorView.tag = floor
             elevatorView.manager = manager
+            
             elevatorViews.append(elevatorView)
             stackView.addArrangedSubview(elevatorView)
         }
     }
     
     func update() {
-        let count = elevatorManager.floorPanels.count - 1
-        
-        for floor in 0..<count {
+        for elevatorPanel in elevatorViews {
+            var state = ElevatorView.State.notOnFloorOrRequested
             
-            var state = ElevatorView.State.notOnFloor
-            
-            if floor == elevatorModel.currentFloor {
-                state = elevatorModel.door.state == .open ? .onFloorDoorOpen :.onFloorDoorClosed
-            }
-            
-            elevatorViews[count - floor].changeState(state)
+            if elevatorPanel.tag == elevator.currentFloor {
+                state = elevator.door.state == .open ? .onFloorDoorOpen :.onFloorDoorClosed
+            } //else if true {
+//                state = .specificElevatorRequest
+//            }
+//            
+            elevatorPanel.changeState(state)
         }
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }
 
