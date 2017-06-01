@@ -44,11 +44,11 @@ class ElevatorViewController: UIViewController {
             var state = ElevatorView.State.notOnFloorOrRequested
             
             if elevatorPanel.tag == elevator.currentFloor {
-                state = elevator.door.state == .open ? .onFloorDoorOpen :.onFloorDoorClosed
-            } //else if true {
-//                state = .specificElevatorRequest
-//            }
-//            
+                state = elevator.door.state == .open ? .onFloorDoorOpen : .onFloorDoorClosed
+            } else if manager.elevators[elevatorIndex].mustVisitRequestedFloors[elevatorPanel.tag] {
+                state = .specificElevatorRequest
+            }
+            
             elevatorPanel.changeState(state)
         }
     }

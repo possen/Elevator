@@ -29,7 +29,6 @@ class FloorRequests {
             indexSearchOrder = Array<Int>(0..<floor).reversed() + Array<Int>(floor..<requestedFloors.count)
         }
         
-        indexSearchOrder.removeFirst() // don't visit current floor.
         print("Search order", indexSearchOrder, direction)
         
         for floor in indexSearchOrder {

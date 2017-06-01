@@ -23,6 +23,7 @@ class Elevator {
     public let door = Door()
     internal var inProgressToFloor : Int? = nil
     internal weak var manager : ElevatorManager! = nil
+    internal var mustVisitRequestedFloors = [Bool](repeating: false, count: totalFloors)
     
     init(name: String) {
         self.name = name
@@ -31,6 +32,7 @@ class Elevator {
     
     internal func visit() {
         inProgressToFloor = nil
+        mustVisitRequestedFloors[currentFloor] = false
         manager.visitNotify(floor: currentFloor, direction: direction)
         print("Visiting:", name, currentFloor)
         door.openRequest()
@@ -38,7 +40,8 @@ class Elevator {
     }
     
     internal func pressFloorButton(floor: Int) {
-        
+        mustVisitRequestedFloors[floor] = true
+        manager.updateNotify()
     }
     
     internal func moveTo(floor: Int) {

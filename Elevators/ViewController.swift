@@ -12,13 +12,15 @@ class ViewController: UIViewController {
     var manager: ElevatorManager!
     var elevatorControllers : [ElevatorViewController] = []
     var floorPanelController : FloorPanelViewController! = nil
-
+    var elevatorDirection : [ (UIButton, UIButton) ] = []
+    
     @IBOutlet weak var floorPanel: UIStackView!
 
     @IBOutlet weak var elevator0: UIStackView!
     @IBOutlet weak var elevator1: UIStackView!
     @IBOutlet weak var elevator2: UIStackView!
     @IBOutlet weak var elevator3: UIStackView!
+    
     @IBOutlet weak var up0: UIButton!
     @IBOutlet weak var down0: UIButton!
     @IBOutlet weak var up1: UIButton!
@@ -43,18 +45,35 @@ class ViewController: UIViewController {
         
         elevatorControllers = [elevatorController0, elevatorController1, elevatorController2, elevatorController3]
         
-        _ = elevatorControllers.map { $0.update() }
+        elevatorDirection = [(up0, down0), (up1, down1), (up2, down2), (up3, down3)]
+        _ = elevatorDirection.map { (up, down) in up.isUserInteractionEnabled = false; down.isUserInteractionEnabled = false }
+        
+        update()
         
         manager.motionComplete = {
             print("movements complete")
-            _ = self.elevatorControllers.map { $0.update() }
-            _ = self.floorPanelController.update()
+            self.update()
         }
         
         manager.updateNotify = {
-            _ = self.elevatorControllers.map { $0.update() }
-            _ = self.floorPanelController.update()
+            self.update()
+        }
+    }
+
+    func update() {
+        _ = elevatorControllers.map { $0.update() }
+        _ = floorPanelController.update()
+        _ = elevatorDirection.enumerated().map { (index, tuple ) in
+            let up = tuple.0; let down = tuple.1
+            let elevator = self.manager.elevators[index]
+            let direction = elevator.direction
+            
+            up.isHighlighted = direction == .up
+            down.isHighlighted = direction == .down
         }
     }
 }
+
+
+
 
