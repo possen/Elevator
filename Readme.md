@@ -21,3 +21,8 @@ Operation
 Bugs
 ----
 * the up and down buttons on the floor panels should renable if the elevator that servieced the request changed directions. 
+
+
+Screenshot
+----------
+![alt text](https://github.com/possen/Elevator/blob/master/Screenshot.png)
