@@ -45,7 +45,7 @@ class ElevatorViewController: UIViewController {
             
             if elevatorPanel.tag == elevator.currentFloor {
                 state = elevator.door.state == .open ? .onFloorDoorOpen : .onFloorDoorClosed
-            } else if manager.elevators[elevatorIndex].mustVisitRequestedFloors[elevatorPanel.tag] {
+            } else if manager.elevators[elevatorIndex].mustVisitRequestedFloors.requestedFloors[elevatorPanel.tag] {
                 state = .specificElevatorRequest
             }
             

@@ -18,6 +18,10 @@ class FloorRequests {
         requestNotify()
     }
     
+    internal func clearFloorRequest(floor: Int) {
+        requestedFloors[floor] = false
+    }
+
     internal func nearestRequestedFloor(from floor: Int, direction:Elevator.Direction) -> Int? {
         var indexSearchOrder : [Int]
         let floor = floor.restrictRange(lower:0, upper: requestedFloors.count - 1)
@@ -42,8 +46,5 @@ class FloorRequests {
         return nil
     }
     
-    internal func clearFloorRequest(floor: Int) {
-        requestedFloors[floor] = false
-    }
 }
 

@@ -22,6 +22,7 @@ class ElevatorManager {
     init() {
         for elevator in elevators {
             elevator.manager = self
+            elevator.mustVisitRequestedFloors.requestNotify = requestNotify
         }
         requests.visitNotify = visitNotify
         requests.requestNotify = requestNotify
@@ -39,6 +40,15 @@ class ElevatorManager {
     }
     
     internal func requestNotify() {
+        
+        for elevator in elevators {
+            let mustVisit = elevator.mustVisitRequestedFloors.nearestRequestedFloor(from: elevator.currentFloor,
+                                                                                    direction: elevator.direction)
+            if let mustVisit = mustVisit {
+                elevator.moveTo(floor:mustVisit)
+            }
+        }
+        
         let distances : [(Elevator, Int, Int)] = elevators.flatMap { elevator in
             if let _ = elevator.inProgressToFloor  {
                 return nil
