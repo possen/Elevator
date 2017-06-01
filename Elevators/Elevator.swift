@@ -122,6 +122,9 @@ class Elevator {
                 self.state = doorState
                 self.cancelClose = false
                 self.elevator.manager.updateNotify()
+                if self.state == .closed {
+                    self.elevator.manager.requestNotify()
+                }
             }
         }
     }
