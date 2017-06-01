@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D53D6BEC1EE01D12006E16FA /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D53D6BEB1EE01D12006E16FA /* Readme.md */; };
 		D568EF961EDD424400635BE0 /* ElevatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF951EDD424400635BE0 /* ElevatorView.swift */; };
 		D568EF981EDD42D600635BE0 /* FloorRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF971EDD42D600635BE0 /* FloorRequests.swift */; };
 		D568EF9A1EDD432F00635BE0 /* ElevatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568EF991EDD432F00635BE0 /* ElevatorManager.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D53D6BEB1EE01D12006E16FA /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		D568EF951EDD424400635BE0 /* ElevatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatorView.swift; sourceTree = "<group>"; };
 		D568EF971EDD42D600635BE0 /* FloorRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorRequests.swift; sourceTree = "<group>"; };
 		D568EF991EDD432F00635BE0 /* ElevatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevatorManager.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		D57028571EDB486500F29DE6 = {
 			isa = PBXGroup;
 			children = (
+				D53D6BEB1EE01D12006E16FA /* Readme.md */,
 				D57028621EDB486500F29DE6 /* Elevators */,
 				D570287C1EDBB0A600F29DE6 /* ElevatorsTests */,
 				D57028611EDB486500F29DE6 /* Products */,
@@ -234,6 +237,7 @@
 			files = (
 				D570286E1EDB486500F29DE6 /* LaunchScreen.storyboard in Resources */,
 				D570286B1EDB486500F29DE6 /* Assets.xcassets in Resources */,
+				D53D6BEC1EE01D12006E16FA /* Readme.md in Resources */,
 				D57028691EDB486500F29DE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
