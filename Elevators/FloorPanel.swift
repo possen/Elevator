@@ -27,13 +27,7 @@ class FloorPanel {
     }
     
     internal func clear(direction : Elevator.Direction) {
-        switch direction {
-        case .up:
-            upRequested = false
-        case .down:
-            downRequested = false
-        default:
-            break
-        }
+        upRequested = false
+        downRequested = false
     }
 }
