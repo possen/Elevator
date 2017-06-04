@@ -20,6 +20,7 @@ class Elevator {
     public let name: String
     public private(set) var currentFloor = 0
     public private(set) var direction = Direction.none
+    public var clearDirection = Direction.none
     public let door = Door()
     internal var inProgressToFloor : Int? = nil
     internal weak var manager : ElevatorManager! = nil
@@ -28,16 +29,14 @@ class Elevator {
     init(name: String) {
         self.name = name
         door.elevator = self
-        mustVisitRequestedFloors.requestNotify = {
-            
-        }
+        mustVisitRequestedFloors.requestNotify = {}
     }
     
     internal func visit() {
         inProgressToFloor = nil
         mustVisitRequestedFloors.clearFloorRequest(floor: currentFloor)
         manager.visitNotify(floor: currentFloor, direction: direction)
-        print("Visiting:", name, currentFloor)
+        print("Elevator: \(name) Visiting Floor: \(currentFloor) \(direction)")
         door.openRequest()
         door.closeRequest()
     }

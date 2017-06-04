@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Elevators/Elevator.swift"
-            timestampString = "518001630.557581"
+            timestampString = "518229236.793559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "moveTo(floor:)"
             landmarkType = "7">
             <Locations>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Elevators/Elevator.swift"
-            timestampString = "518001325.532046"
+            timestampString = "518229236.793559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "init(name:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Elevators/Elevator.swift"
-            timestampString = "518001630.557581"
+            timestampString = "518229236.793559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "changeState(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Elevators/FloorPanelView.swift"
-            timestampString = "517940337.882269"
+            timestampString = "518216520.265335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "init(frame:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -329,22 +329,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Elevators/FloorPanel.swift"
-            timestampString = "517941661.989492"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "clear(direction:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Elevators/ElevatorViewController.swift"
             timestampString = "517942628.780081"
             startingColumnNumber = "9223372036854775807"
@@ -362,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Elevators/Elevator.swift"
-            timestampString = "518001630.557581"
+            timestampString = "518229236.793559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "moveTo(floor:)"
             landmarkType = "7">
          </BreakpointContent>

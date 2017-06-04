@@ -14,13 +14,7 @@ class FloorPanelView: UIStackView {
     let up : UIButton
     let down : UIButton
     var model : FloorPanel! = nil
-    
-    enum State {
-        case onFloorDoorClosed
-        case onFloorDoorOpen
-        case notOnFloor
-    }
-    
+        
     override init(frame: CGRect) {
         let view = UIView(frame: frame)
         layerRef = view.layer

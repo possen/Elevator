@@ -69,11 +69,11 @@ class ElevatorManager {
             elevator.moveTo(floor:floor)
         }
     }
-    
+
     internal func requestFloor(floor: Int) {
         requests.makeRequest(floor: floor)
     }
-    
+
     public func floorButtonPress(floor: Int, direction: Elevator.Direction)  {
         
         let floor = floor.restrictRange(lower:0, upper: floorPanels.count - 1)
@@ -87,6 +87,7 @@ class ElevatorManager {
             break
         }
         
+        print("Request floor -> \(floor) \(direction)")
         requestFloor(floor: floor)
     }
 }
