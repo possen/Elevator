@@ -33,7 +33,7 @@ class ElevatorView: UIStackView {
         floorPressView.addTarget(self, action: #selector(floorPresssAction), for: .touchUpInside)
     }
     
-    func floorPresssAction(sender: Any) {
+    @objc func floorPresssAction(sender: Any) {
         print("elevator floor request \(tag) elevator \(elevator.name)")
         
         elevator.pressFloorButton(floor: tag)

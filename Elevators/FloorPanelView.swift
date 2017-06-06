@@ -56,12 +56,12 @@ class FloorPanelView: UIStackView {
         down.isEnabled = !model.downRequested
     }
 
-    func upAction(sender: Any) {
+    @objc func upAction(sender: Any) {
         print("up \(tag)")
         manager.floorButtonPress(floor: tag, direction: .up)
     }
     
-    func downAction(sender: Any) {
+    @objc func downAction(sender: Any) {
         print("down \(tag)")
         manager.floorButtonPress(floor: tag, direction: .down)
     }

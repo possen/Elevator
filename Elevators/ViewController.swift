@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         elevatorControllers = [elevatorController0, elevatorController1, elevatorController2, elevatorController3]
         
         elevatorDirection = [(up0, down0), (up1, down1), (up2, down2), (up3, down3)]
-        _ = elevatorDirection.map { (up, down) in up.isUserInteractionEnabled = false; down.isUserInteractionEnabled = false }
+        _ = elevatorDirection.map { let (up, down) = $0; up.isUserInteractionEnabled = false; down.isUserInteractionEnabled = false }
         
         update()
         
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     func update() {
         _ = elevatorControllers.map { $0.update() }
         _ = floorPanelController.update()
-        _ = elevatorDirection.enumerated().map { (index, tuple ) in
+        _ = elevatorDirection.enumerated().map { let (index, tuple ) = $0;
             let up = tuple.0; let down = tuple.1
             let elevator = self.manager.elevators[index]
             let direction = elevator.direction

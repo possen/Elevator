@@ -10,7 +10,7 @@ import Foundation
 
 class FloorRequests {
     internal var requestNotify : () -> Void = {}
-    internal var visitNotify : (Int, Elevator.Direction) -> Void = { floor in }
+    internal var visitNotify : (Int, Elevator.Direction) -> Void = { floor, direction in }
     internal var requestedFloors = [Bool](repeating: false, count: totalFloors)
     
     internal func makeRequest(floor : Int) {
