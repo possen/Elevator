@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorsTests/ElevatorsTests.swift"
-            timestampString = "517817835.599966"
+            timestampString = "519545381.1117"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -198,43 +198,89 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorsTests/ElevatorsTests.swift"
-            timestampString = "517831508.031715"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "testFloorMoveDown2()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ElevatorsTests/ElevatorsTests.swift"
-            timestampString = "517831753.584479"
+            timestampString = "519545381.114427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "testFloorMoveStart1()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElevatorsTests.ElevatorsTests.testFloorMoveStart1() -&gt; ()"
+                  moduleName = "ElevatorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/possen/Projects/Elevators/ElevatorsTests/ElevatorsTests.swift"
+                  timestampString = "519543166.790474"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1431">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #5 : @autoclosure () throws -&gt; Swift.Array&lt;Swift.Int&gt; in ElevatorsTests.ElevatorsTests.testFloorMoveStart1() -&gt; ()"
+                  moduleName = "ElevatorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/possen/Projects/Elevators/ElevatorsTests/ElevatorsTests.swift"
+                  timestampString = "519543166.794883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Elevators.Elevator) -&gt; Swift.Int in implicit closure #5 : @autoclosure () throws -&gt; Swift.Array&lt;Swift.Int&gt; in ElevatorsTests.ElevatorsTests.testFloorMoveStart1() -&gt; ()"
+                  moduleName = "ElevatorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/possen/Projects/Elevators/ElevatorsTests/ElevatorsTests.swift"
+                  timestampString = "519543166.800263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #6 : @autoclosure () throws -&gt; Swift.Array&lt;Swift.Int&gt; in ElevatorsTests.ElevatorsTests.testFloorMoveStart1() -&gt; ()"
+                  moduleName = "ElevatorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/possen/Projects/Elevators/ElevatorsTests/ElevatorsTests.swift"
+                  timestampString = "519543166.804201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorsTests/ElevatorsTests.swift"
-            timestampString = "517831758.07589"
+            timestampString = "519545381.114665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -449,6 +495,22 @@
                   offsetFromSymbolStart = "514">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Elevators/ElevatorViewController.swift"
+            timestampString = "518486216.389677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "update()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
